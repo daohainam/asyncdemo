@@ -6,8 +6,7 @@
         {
             foreach (int i in OddNumbers(10))
             {
-                if (i > 100) break;
-                    Console.Write($"{i} ");
+                Console.Write($"{i} ");
             }
         }
 
