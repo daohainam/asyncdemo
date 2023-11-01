@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncDemo", "AsyncDemo\Asyn
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YieldDemo", "YieldDemo\YieldDemo.csproj", "{B8C69B88-75DD-4CA3-8C83-B6DED11B858E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvoidAsync", "AvoidAsync\AvoidAsync.csproj", "{F1D46B6C-8D80-4B93-9AFB-C9AD4E6C3BBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B8C69B88-75DD-4CA3-8C83-B6DED11B858E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8C69B88-75DD-4CA3-8C83-B6DED11B858E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8C69B88-75DD-4CA3-8C83-B6DED11B858E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1D46B6C-8D80-4B93-9AFB-C9AD4E6C3BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1D46B6C-8D80-4B93-9AFB-C9AD4E6C3BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1D46B6C-8D80-4B93-9AFB-C9AD4E6C3BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1D46B6C-8D80-4B93-9AFB-C9AD4E6C3BBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
