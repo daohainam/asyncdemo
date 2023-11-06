@@ -61,5 +61,32 @@ namespace WindowsFormsApp1
                 txtMessage.Text = text;
             }
         }
+
+        private void cmdUsingNewThread_Click(object sender, EventArgs e)
+        {
+            Thread t = new Thread(() => {
+                txtMessage.Text = "Start new-thread";
+                Thread.Sleep(5000);
+                txtMessage.Text = "Done new-thread";
+            });
+
+            t.Start();
+        }
+
+        private void cmdUsingSynchronizationContext_Click(object sender, EventArgs e)
+        {
+            var sc = SynchronizationContext.Current;
+
+            Thread t = new Thread(() => {
+                sc.Post((state) =>
+                {
+                    txtMessage.Text = "Start new-thread with SynchronizationContext";
+                    Thread.Sleep(5000);
+                    txtMessage.Text = "Done new-thread with SynchronizationContext";
+                }, null);
+            });
+
+            t.Start();
+        }
     }
 }

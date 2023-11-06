@@ -33,6 +33,8 @@
             this.txtMessage = new System.Windows.Forms.Label();
             this.cmdAsync = new System.Windows.Forms.Button();
             this.cmdUsingInvoke = new System.Windows.Forms.Button();
+            this.cmdUsingNewThread = new System.Windows.Forms.Button();
+            this.cmdUsingSynchronizationContext = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmdLaggedButton
@@ -88,11 +90,35 @@
             this.cmdUsingInvoke.UseVisualStyleBackColor = false;
             this.cmdUsingInvoke.Click += new System.EventHandler(this.cmdUsingInvoke_Click);
             // 
+            // cmdUsingNewThread
+            // 
+            this.cmdUsingNewThread.BackColor = System.Drawing.Color.Orange;
+            this.cmdUsingNewThread.Location = new System.Drawing.Point(27, 320);
+            this.cmdUsingNewThread.Name = "cmdUsingNewThread";
+            this.cmdUsingNewThread.Size = new System.Drawing.Size(244, 54);
+            this.cmdUsingNewThread.TabIndex = 5;
+            this.cmdUsingNewThread.Text = "Using new thread button";
+            this.cmdUsingNewThread.UseVisualStyleBackColor = false;
+            this.cmdUsingNewThread.Click += new System.EventHandler(this.cmdUsingNewThread_Click);
+            // 
+            // cmdUsingSynchronizationContext
+            // 
+            this.cmdUsingSynchronizationContext.BackColor = System.Drawing.Color.MediumOrchid;
+            this.cmdUsingSynchronizationContext.Location = new System.Drawing.Point(27, 380);
+            this.cmdUsingSynchronizationContext.Name = "cmdUsingSynchronizationContext";
+            this.cmdUsingSynchronizationContext.Size = new System.Drawing.Size(244, 54);
+            this.cmdUsingSynchronizationContext.TabIndex = 6;
+            this.cmdUsingSynchronizationContext.Text = "Using new thread with SynchronizationContext button";
+            this.cmdUsingSynchronizationContext.UseVisualStyleBackColor = false;
+            this.cmdUsingSynchronizationContext.Click += new System.EventHandler(this.cmdUsingSynchronizationContext_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(301, 338);
+            this.ClientSize = new System.Drawing.Size(301, 468);
+            this.Controls.Add(this.cmdUsingSynchronizationContext);
+            this.Controls.Add(this.cmdUsingNewThread);
             this.Controls.Add(this.cmdUsingInvoke);
             this.Controls.Add(this.cmdAsync);
             this.Controls.Add(this.txtMessage);
@@ -112,6 +138,8 @@
         private System.Windows.Forms.Label txtMessage;
         private System.Windows.Forms.Button cmdAsync;
         private System.Windows.Forms.Button cmdUsingInvoke;
+        private System.Windows.Forms.Button cmdUsingNewThread;
+        private System.Windows.Forms.Button cmdUsingSynchronizationContext;
     }
 }
 
