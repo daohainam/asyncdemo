@@ -4,20 +4,23 @@ namespace AvoidAsync
 {
     internal class Program
     {
-        static void Main()
+        static async Task Main()
         {
-            Time(async () =>
-            {
-                Console.WriteLine("Enter");
-                await Task.Delay(TimeSpan.FromSeconds(10));
-                Console.WriteLine("Exit");
-            });
+            await TimeAsync(InnerFunc);
         }
-        static void Time(Action action)
+
+        static async Task InnerFunc()
+        {
+            Console.WriteLine("Enter");
+            await Task.Delay(TimeSpan.FromSeconds(3));
+            Console.WriteLine("Exit");
+        }
+
+        static async Task TimeAsync(Func<Task> action)
         {
             Console.WriteLine("Timing...");
             Stopwatch sw = Stopwatch.StartNew();
-            action();
+            await action();
             Console.WriteLine($"...done timing: {sw.Elapsed}");
         }
     }
