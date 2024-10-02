@@ -12,7 +12,7 @@ namespace WinFormsApp1
             InsertText(await GetThreadInfoAsync());
         }
 
-        private async void cmdCallConfigureAwaitFall_Click(object sender, EventArgs e)
+        private async void cmdCallConfigureAwaitFalse_Click(object sender, EventArgs e)
         {
             InsertText(await GetThreadInfoAsync().ConfigureAwait(false));
         }

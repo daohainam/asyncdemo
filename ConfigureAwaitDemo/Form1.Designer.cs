@@ -30,7 +30,7 @@
         {
             cmdCallAwait = new Button();
             cmdCallThread = new Button();
-            cmdCallConfigureAwaitFall = new Button();
+            cmdCallConfigureAwaitFalse = new Button();
             txtResult = new TextBox();
             cmdCallResult = new Button();
             SuspendLayout();
@@ -57,16 +57,16 @@
             cmdCallThread.UseVisualStyleBackColor = false;
             cmdCallThread.Click += cmdCallThread_Click;
             // 
-            // cmdCallConfigureAwaitFall
+            // cmdCallConfigureAwaitFalse
             // 
-            cmdCallConfigureAwaitFall.BackColor = Color.FromArgb(255, 192, 192);
-            cmdCallConfigureAwaitFall.Location = new Point(37, 109);
-            cmdCallConfigureAwaitFall.Name = "cmdCallConfigureAwaitFall";
-            cmdCallConfigureAwaitFall.Size = new Size(275, 29);
-            cmdCallConfigureAwaitFall.TabIndex = 2;
-            cmdCallConfigureAwaitFall.Text = "Call using ConfigureAwait(false)";
-            cmdCallConfigureAwaitFall.UseVisualStyleBackColor = false;
-            cmdCallConfigureAwaitFall.Click += cmdCallConfigureAwaitFall_Click;
+            cmdCallConfigureAwaitFalse.BackColor = Color.FromArgb(255, 192, 192);
+            cmdCallConfigureAwaitFalse.Location = new Point(37, 109);
+            cmdCallConfigureAwaitFalse.Name = "cmdCallConfigureAwaitFalse";
+            cmdCallConfigureAwaitFalse.Size = new Size(275, 29);
+            cmdCallConfigureAwaitFalse.TabIndex = 2;
+            cmdCallConfigureAwaitFalse.Text = "Call using ConfigureAwait(false)";
+            cmdCallConfigureAwaitFalse.UseVisualStyleBackColor = false;
+            cmdCallConfigureAwaitFalse.Click += cmdCallConfigureAwaitFalse_Click;
             // 
             // txtResult
             // 
@@ -96,7 +96,7 @@
             ClientSize = new Size(617, 296);
             Controls.Add(cmdCallResult);
             Controls.Add(txtResult);
-            Controls.Add(cmdCallConfigureAwaitFall);
+            Controls.Add(cmdCallConfigureAwaitFalse);
             Controls.Add(cmdCallThread);
             Controls.Add(cmdCallAwait);
             Name = "Form1";
@@ -109,7 +109,7 @@
 
         private Button cmdCallAwait;
         private Button cmdCallThread;
-        private Button cmdCallConfigureAwaitFall;
+        private Button cmdCallConfigureAwaitFalse;
         private TextBox txtResult;
         private Button cmdCallResult;
     }
