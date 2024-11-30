@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DifferentButtonHandlers", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigureAwaitDemo", "ConfigureAwaitDemo\ConfigureAwaitDemo.csproj", "{787B5769-B255-4377-9A3B-5689A1865428}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallingAsyncDemo", "CallingAsyncDemo\CallingAsyncDemo.csproj", "{1F234A87-9EBB-4B60-9C30-19EF729AF280}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{787B5769-B255-4377-9A3B-5689A1865428}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{787B5769-B255-4377-9A3B-5689A1865428}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{787B5769-B255-4377-9A3B-5689A1865428}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F234A87-9EBB-4B60-9C30-19EF729AF280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F234A87-9EBB-4B60-9C30-19EF729AF280}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F234A87-9EBB-4B60-9C30-19EF729AF280}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F234A87-9EBB-4B60-9C30-19EF729AF280}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
