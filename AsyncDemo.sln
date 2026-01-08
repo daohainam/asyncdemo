@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.7.34202.233
+# Visual Studio Version 18
+VisualStudioVersion = 18.1.11312.151 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncDemo", "AsyncDemo\AsyncDemo.csproj", "{0CCC93A8-1EEA-4D07-A0FF-5F4562E6BC3D}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigureAwaitDemo", "ConfigureAwaitDemo\ConfigureAwaitDemo.csproj", "{787B5769-B255-4377-9A3B-5689A1865428}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallingAsyncDemo", "CallingAsyncDemo\CallingAsyncDemo.csproj", "{1F234A87-9EBB-4B60-9C30-19EF729AF280}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncDemo2", "AsyncDemo2\AsyncDemo2.csproj", "{1A4806A5-66B4-49CF-8C4B-04F1DD4D6170}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{1F234A87-9EBB-4B60-9C30-19EF729AF280}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F234A87-9EBB-4B60-9C30-19EF729AF280}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F234A87-9EBB-4B60-9C30-19EF729AF280}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A4806A5-66B4-49CF-8C4B-04F1DD4D6170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A4806A5-66B4-49CF-8C4B-04F1DD4D6170}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A4806A5-66B4-49CF-8C4B-04F1DD4D6170}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A4806A5-66B4-49CF-8C4B-04F1DD4D6170}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
