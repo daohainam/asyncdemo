@@ -11,7 +11,7 @@ await AsyncFunc2(); // vì có await nên hàm Main sẽ chờ AsyncFunc2 hoàn 
 for (int i = 0; i < 5; i++)
 {
     Console.WriteLine("Main iteration {0} (thread {1})", i, Environment.CurrentManagedThreadId);
-    await Task.Delay(2000); // Tương tự như trên, sau await này, hàm Main có thể tiếp tục trên một thread khác
+    await Task.Delay(2000); // Sau await này, hàm Main có thể tiếp tục trên một thread khác
 }
 
 Console.WriteLine("\n--- Calling AsyncFunc2 without await ---");
@@ -19,12 +19,12 @@ var t = AsyncFunc2(); // Vì không có await nên hàm Main sẽ không chờ A
 for (int i = 0; i < 5; i++)
 {
     Console.WriteLine("Main iteration {0} (thread {1})", i, Environment.CurrentManagedThreadId);
-    await Task.Delay(2000); // Sau await này, hàm Main có thể tiếp tục trên một thread khác
+    await Task.Delay(2000); // Tương tự như trên, sau await này, hàm Main có thể tiếp tục trên một thread khác
 }
 await t; // Ta vẫn nên await để đảm bảo AsyncFunc2 hoàn thành trước khi tiếp tục 
 
 /*
- * Bất cứ khi nào ta gọi AsyncFunc2() thì hàm này sẽ bắt đầu thực thi trên cùng một thread với hàm gọi nó (trong trường hợp này là Main).
+ * Bất cứ khi nào ta gọi AsyncFunc2() thì hàm này sẽ bắt đầu thực thi trên cùng một thread với hàm gọi nó (trong trường hợp này là Main) dù có dùng await hay không.
  * Trong ví dụ "Calling AsyncFunc2 without await", hàm AsyncFunc2 vẫn chạy trên cùng thread với Main và chỉ thay đổi thread khi gặp await bên trong nó.
  * Bạn có thể kiểm chứng bằng cách bỏ ghi chú dòng Thread.Sleep(8000); trong AsyncFunc2 để thấy rằng vòng for dòng 19 chỉ tiếp tục sau khi đã sleep xong.
  */
