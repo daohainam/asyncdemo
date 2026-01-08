@@ -16,10 +16,21 @@ namespace AsyncDemo
             await AsyncFunc1(); // xem comment trong phần khai báo hàm
             // Vì AsyncFunc1() không có async nào xảy ra nên Thread ID vẫn là 1
             Console.WriteLine($"Current thread Id after AsyncFunc1(): {Environment.CurrentManagedThreadId}");
-            await AsyncFunc2(); // xem comment trong phần khai báo hàm
-            // Sau khi lời gọi async trong AsyncFunc2 kết thúc, nó sẽ tiếp tục thực thi như một hàm sync bình thường
-            // Do vậy Thread ID in ra ở vị trí này sẽ giống với Thread ID trong AsyncFunc2 - 2
-            Console.WriteLine($"Current thread Id after AsyncFunc2(): {Environment.CurrentManagedThreadId}");
+
+            int i = 1;
+            while (i < 100000)
+            {
+                var r = await AsyncFunc2(); // xem comment trong phần khai báo hàm
+                                            // Sau khi lời gọi async trong AsyncFunc2 kết thúc, nó sẽ tiếp tục thực thi như một hàm sync bình thường
+                                            // Do vậy Thread ID in ra ở vị trí này sẽ giống với Thread ID trong AsyncFunc2 - 2
+                Console.WriteLine($"Current thread Id after AsyncFunc2(): {Environment.CurrentManagedThreadId}");
+
+                if (Environment.CurrentManagedThreadId != r)
+                {
+                    Console.WriteLine($"Thread ID is different ({i})");
+                    break;
+                }
+            }
 
             // Task.Run luôn gọi hàm action bên trong nó với một thread mới, 
             var t1 = Task.Run(() => Console.WriteLine($"Current thread Id in Task.Run 1: {Environment.CurrentManagedThreadId}"));
@@ -73,7 +84,7 @@ namespace AsyncDemo
             // mới (về lý thuyết nó vẫn có thể là 1 nếu như thread 'mới' này lại trúng ngay thread 'cũ').
             Console.WriteLine($"Current thread Id in AsyncFunc2 - 2: {Environment.CurrentManagedThreadId}");
 
-            return r;
+            return Environment.CurrentManagedThreadId;
         }
 
     }
