@@ -7,7 +7,7 @@ await AsyncFunc1();
 Console.WriteLine("Back to Main (thread {0})", Environment.CurrentManagedThreadId);
 
 Console.WriteLine("\n--- Calling AsyncFunc2 with await ---");
-//await AsyncFunc2(); // vì có await nên hàm Main sẽ chờ AsyncFunc2 hoàn thành trước khi tiếp tục
+await AsyncFunc2(); // vì có await nên hàm Main sẽ chờ AsyncFunc2 hoàn thành trước khi tiếp tục
 for (int i = 0; i < 5; i++)
 {
     Console.WriteLine("Main iteration {0} (thread {1})", i, Environment.CurrentManagedThreadId);
@@ -15,7 +15,7 @@ for (int i = 0; i < 5; i++)
 }
 
 Console.WriteLine("\n--- Calling AsyncFunc2 without await ---");
-var t = AsyncFunc2(); // Vì không có await nên hàm Main sẽ không chờ AsyncFunc2 hoàn thành mà tiếp tục thực thi các lệnh bên dưới
+var t = AsyncFunc2(); // Vì không có await nên hàm Main sẽ không chờ AsyncFunc2 hoàn thành mà tiếp tục thực thi các lệnh bên dưới, do vậy hai hàm sẽ chạy đồng thời
 for (int i = 0; i < 5; i++)
 {
     Console.WriteLine("Main iteration {0} (thread {1})", i, Environment.CurrentManagedThreadId);
